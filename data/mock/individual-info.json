@@ -1,0 +1,722 @@
+[
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2019-4호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "유산균발효다시마추출물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "간 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2020-7호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "가쓰오부시올리고펩타이드",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2012-1호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "1200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "시서스추출물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "체지방 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-3호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1500",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "호박씨추출물등복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "배뇨 기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2015-4호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1000",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "합성 PLAG 복합물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "면역기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2023-3호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "900",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "홍국쌀 추출분말",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "혈중 콜레스테롤 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2024-3호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "폴리코사놀-사탕수수왁스알코올 복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "혈중 콜레스테롤 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2010-2호",
+  "DAY_INTK_LOWLIMIT": "700",
+  "DAY_INTK_HIGHLIMIT": "2800",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "복분자주정추출분말",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "항산화 작용으로 세포 보호에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-6호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "은행잎추출물",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "인지력 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2013-1호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "900",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "곤약감자추출물",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "자외선에 의한 피부 손상으로부터 피부 건강을 유지하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2023-6호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "카제인가수분해물",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-3호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "300",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "폴리코사놀-사탕수수왁스알코올",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "혈중 콜레스테롤 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2019-7호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "400",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "정어리펩타이드",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-2호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "150",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "자일로올리고당",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "장 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2010-4호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "900",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "시서스추출물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "체지방 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2013-2호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "홍삼·당귀 혼합추출물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "갱년기 남성의 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-10호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "녹차추출물(카테킨)",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "체지방 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-9호",
+  "DAY_INTK_LOWLIMIT": "700",
+  "DAY_INTK_HIGHLIMIT": "1400",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "동결건조 여주분말 복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2014-1호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "백수오등복합추출물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "월경 전 불편한 상태 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2015-1호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "1200",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "나토균 배양분말 복합물",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "혈행 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2011-4호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "청국장균 배양정제물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "면역기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2004-1호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1000",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "옥타코사놀함유유지",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "운동수행능력 향상에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-5호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "홍경천추출물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "피로 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2011-3호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "300",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "메나키논-7 함유 발효분말",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "혈소판 응집 억제를 통한 혈행 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2005-2호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "코엔자임Q10",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "유해산소로부터 세포를 보호하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2015-3호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "청국장균 배양정제물",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "과민반응에 의한 코 상태 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2017-8호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "보스웰리아 추출물",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "관절 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2019-1호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "토마토추출물(라이코펜) 복합물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "항산화 작용으로 세포 보호에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-12호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "메나키논-7 함유 발효분말",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "혈소판 응집 억제를 통한 혈행 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-4호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "구아바잎추출물 복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2020-9호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "400",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "동충하초주정추출물 복합물",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "면역기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-4호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1000",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "해태올리고펩티드",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-1호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "전립선용 사군자추출분말",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "전립선 건강 유지에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2023-7호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "회화나무열매추출물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "갱년기 남성의 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-2호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "쏘팔메토열매추출물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "배뇨 기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2025-8호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "900",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "락토바실러스 복합물 LP-1",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "장 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2020-1호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "당귀등추출복합물",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "인지력 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2017-6호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1500",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "미강주정추출물",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "스트레스로 인한 긴장 완화에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2017-1호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "800",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "가쓰오부시올리고펩타이드",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2022-5호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "석류농축액",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "갱년기 남성의 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2011-5호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "150",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "보이차추출물",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "혈중 콜레스테롤 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2024-2호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "표고버섯균사체",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "알코올성 손상으로부터 간을 보호하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2024-6호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "800",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "핑거루트추출분말",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "자외선에 의한 피부 손상으로부터 피부 건강을 유지하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2019-3호",
+  "DAY_INTK_LOWLIMIT": "700",
+  "DAY_INTK_HIGHLIMIT": "2100",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "칼슘부족 개선용 해조칼슘",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "관절 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2024-7호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "400",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "바나바주정추출물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2019-5호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "1200",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "표고버섯균사체",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "알코올성 손상으로부터 간을 보호하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2022-6호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1000",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "옥타코사놀함유유지",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "근력 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2024-5호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "홍삼·당귀 혼합추출물",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "월경 전 불편한 상태 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2022-2호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "크레아틴모노하이드레이트",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "근력 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2021-4호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "600",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "탈지달맞이꽃종자주정추출물",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2012-2호",
+  "DAY_INTK_LOWLIMIT": "700",
+  "DAY_INTK_HIGHLIMIT": "2800",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "L-글루타민 복합물",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "면역기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2023-4호",
+  "DAY_INTK_LOWLIMIT": "700",
+  "DAY_INTK_HIGHLIMIT": "2100",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "보이차추출물 복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "혈중 콜레스테롤 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2020-3호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "2000",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "당귀등추출복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "인지력 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2015-2호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "1000",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "락토바실러스 복합물 LP-1",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "장내 유익균 증식 및 유해균 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2014-2호",
+  "DAY_INTK_LOWLIMIT": "200",
+  "DAY_INTK_HIGHLIMIT": "400",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "쏘팔메토열매추출물 복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "배뇨 기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2015-8호",
+  "DAY_INTK_LOWLIMIT": "300",
+  "DAY_INTK_HIGHLIMIT": "900",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "크레아틴모노하이드레이트",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "운동수행능력 향상에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2010-1호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "2000",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "탈지달맞이꽃종자주정추출물",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2017-7호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "400",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "토마토추출물(라이코펜) 복합물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "유해산소로부터 세포를 보호하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2016-6호",
+  "DAY_INTK_LOWLIMIT": "500",
+  "DAY_INTK_HIGHLIMIT": "2000",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "레몬밤추출물 혼합분말",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "체지방 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2012-3호",
+  "DAY_INTK_LOWLIMIT": "700",
+  "DAY_INTK_HIGHLIMIT": "2100",
+  "WT_UNIT": "mL",
+  "RAWMTRL_NM": "아스타잔틴 헤마토코쿠스추출물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "노화로 인해 감소될 수 있는 황반색소밀도를 유지하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2003-2호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "백수오등복합추출물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "갱년기 남성의 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2001-20호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "밀크씨슬추출물",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "간 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제1999-9호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "홍삼·당귀 혼합추출물",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "갱년기 여성의 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2001-2호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "쌀겨추출물",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "피부 보습에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2002-9호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "L-글루타민",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "면역기능 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2002-6호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "매실추출물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "피로 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2000-3호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "락토페린(우유정제단백질)",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "체지방 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2002-7호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "커피만노올리고당분말",
+  "IFTKN_ATNT_MATR_CN": "항응고제 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "장 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2002-15호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "메나키논-7 함유 발효분말",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "혈소판 응집 억제를 통한 혈행 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2000-5호",
+  "DAY_INTK_LOWLIMIT": "400",
+  "DAY_INTK_HIGHLIMIT": "800",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "바나바주정추출물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제1998-4호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "구아바잎추출물 복합물",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "식후 혈당 상승 억제에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2000-10호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "해태올리고펩티드",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2000-1호",
+  "DAY_INTK_LOWLIMIT": "400",
+  "DAY_INTK_HIGHLIMIT": "800",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "로즈힙분말",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "관절 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제1999-13호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "유산균발효다시마추출물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "알코올성 손상으로부터 간을 보호하는데 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2003-2호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "호박씨추출물등복합물",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "전립선 건강 유지에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2003-10호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "정어리정제어유",
+  "IFTKN_ATNT_MATR_CN": "이상 사례 발생 시 섭취를 중단하고 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "혈소판 응집 억제를 통한 혈행 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제1999-17호",
+  "DAY_INTK_LOWLIMIT": "400",
+  "DAY_INTK_HIGHLIMIT": "800",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "포스파티딜세린",
+  "IFTKN_ATNT_MATR_CN": "알레르기 체질인 경우 성분을 확인 후 섭취할 것",
+  "PRIMARY_FNCLTY": "인지력 개선에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2000-3호",
+  "DAY_INTK_LOWLIMIT": "100",
+  "DAY_INTK_HIGHLIMIT": "200",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "로즈힙분말",
+  "IFTKN_ATNT_MATR_CN": "특정 질환이 있거나 의약품 복용 시 전문가와 상담할 것",
+  "PRIMARY_FNCLTY": "관절 및 연골 건강에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제1998-2호",
+  "DAY_INTK_LOWLIMIT": "250",
+  "DAY_INTK_HIGHLIMIT": "500",
+  "WT_UNIT": "g",
+  "RAWMTRL_NM": "정어리펩타이드",
+  "IFTKN_ATNT_MATR_CN": "정해진 섭취량을 초과하지 말 것",
+  "PRIMARY_FNCLTY": "높은 혈압 감소에 도움을 줄 수 있음"
+ },
+ {
+  "HF_FNCLTY_MTRAL_RCOGN_NO": "제2003-2호",
+  "DAY_INTK_LOWLIMIT": "50",
+  "DAY_INTK_HIGHLIMIT": "100",
+  "WT_UNIT": "mg",
+  "RAWMTRL_NM": "히알루론산",
+  "IFTKN_ATNT_MATR_CN": "임산부, 수유부 및 어린이는 섭취를 피할 것",
+  "PRIMARY_FNCLTY": "피부 보습에 도움을 줄 수 있음"
+ }
+]

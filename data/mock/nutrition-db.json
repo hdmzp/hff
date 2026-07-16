@@ -1,0 +1,422 @@
+[
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A01",
+  "LCLAS_NM": "면역기능",
+  "MLSFC_CD": "A01001",
+  "MLSFC_NM": "면역기능 개선",
+  "SCLAS_CD": "A01001000",
+  "SCLAS_NM": "면역기능 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A01",
+  "LCLAS_NM": "면역기능",
+  "MLSFC_CD": "A01002",
+  "MLSFC_NM": "과민반응 개선",
+  "SCLAS_CD": "A01002000",
+  "SCLAS_NM": "과민반응 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A02",
+  "LCLAS_NM": "장 건강",
+  "MLSFC_CD": "A02001",
+  "MLSFC_NM": "장내 균총 개선",
+  "SCLAS_CD": "A02001000",
+  "SCLAS_NM": "장내 균총 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A02",
+  "LCLAS_NM": "장 건강",
+  "MLSFC_CD": "A02002",
+  "MLSFC_NM": "배변활동 원활",
+  "SCLAS_CD": "A02002000",
+  "SCLAS_NM": "배변활동 원활"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A02",
+  "LCLAS_NM": "장 건강",
+  "MLSFC_CD": "A02003",
+  "MLSFC_NM": "프로바이오틱스",
+  "SCLAS_CD": "A02003000",
+  "SCLAS_NM": "프로바이오틱스"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A03",
+  "LCLAS_NM": "혈행·혈관 건강",
+  "MLSFC_CD": "A03001",
+  "MLSFC_NM": "혈행 개선",
+  "SCLAS_CD": "A03001000",
+  "SCLAS_NM": "혈행 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A03",
+  "LCLAS_NM": "혈행·혈관 건강",
+  "MLSFC_CD": "A03002",
+  "MLSFC_NM": "혈압 조절",
+  "SCLAS_CD": "A03002000",
+  "SCLAS_NM": "혈압 조절"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A03",
+  "LCLAS_NM": "혈행·혈관 건강",
+  "MLSFC_CD": "A03003",
+  "MLSFC_NM": "혈중 콜레스테롤 개선",
+  "SCLAS_CD": "A03003000",
+  "SCLAS_NM": "혈중 콜레스테롤 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A03",
+  "LCLAS_NM": "혈행·혈관 건강",
+  "MLSFC_CD": "A03004",
+  "MLSFC_NM": "혈중 중성지방 개선",
+  "SCLAS_CD": "A03004000",
+  "SCLAS_NM": "혈중 중성지방 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A04",
+  "LCLAS_NM": "대사 건강",
+  "MLSFC_CD": "A04001",
+  "MLSFC_NM": "혈당 조절",
+  "SCLAS_CD": "A04001000",
+  "SCLAS_NM": "혈당 조절"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A04",
+  "LCLAS_NM": "대사 건강",
+  "MLSFC_CD": "A04002",
+  "MLSFC_NM": "체지방 감소",
+  "SCLAS_CD": "A04002000",
+  "SCLAS_NM": "체지방 감소"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A05",
+  "LCLAS_NM": "신체 조직 건강",
+  "MLSFC_CD": "A05001",
+  "MLSFC_NM": "관절·연골 건강",
+  "SCLAS_CD": "A05001000",
+  "SCLAS_NM": "관절·연골 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A05",
+  "LCLAS_NM": "신체 조직 건강",
+  "MLSFC_CD": "A05002",
+  "MLSFC_NM": "뼈 건강",
+  "SCLAS_CD": "A05002000",
+  "SCLAS_NM": "뼈 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A05",
+  "LCLAS_NM": "신체 조직 건강",
+  "MLSFC_CD": "A05003",
+  "MLSFC_NM": "피부 건강",
+  "SCLAS_CD": "A05003000",
+  "SCLAS_NM": "피부 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A05",
+  "LCLAS_NM": "신체 조직 건강",
+  "MLSFC_CD": "A05004",
+  "MLSFC_NM": "눈 건강",
+  "SCLAS_CD": "A05004000",
+  "SCLAS_NM": "눈 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A05",
+  "LCLAS_NM": "신체 조직 건강",
+  "MLSFC_CD": "A05005",
+  "MLSFC_NM": "간 건강",
+  "SCLAS_CD": "A05005000",
+  "SCLAS_NM": "간 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A05",
+  "LCLAS_NM": "신체 조직 건강",
+  "MLSFC_CD": "A05006",
+  "MLSFC_NM": "전립선 건강",
+  "SCLAS_CD": "A05006000",
+  "SCLAS_NM": "전립선 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A06",
+  "LCLAS_NM": "활력·정신 건강",
+  "MLSFC_CD": "A06001",
+  "MLSFC_NM": "기억력·인지력 개선",
+  "SCLAS_CD": "A06001000",
+  "SCLAS_NM": "기억력·인지력 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A06",
+  "LCLAS_NM": "활력·정신 건강",
+  "MLSFC_CD": "A06002",
+  "MLSFC_NM": "피로 개선",
+  "SCLAS_CD": "A06002000",
+  "SCLAS_NM": "피로 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A06",
+  "LCLAS_NM": "활력·정신 건강",
+  "MLSFC_CD": "A06003",
+  "MLSFC_NM": "수면의 질 개선",
+  "SCLAS_CD": "A06003000",
+  "SCLAS_NM": "수면의 질 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A06",
+  "LCLAS_NM": "활력·정신 건강",
+  "MLSFC_CD": "A06004",
+  "MLSFC_NM": "스트레스 완화",
+  "SCLAS_CD": "A06004000",
+  "SCLAS_NM": "스트레스 완화"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A06",
+  "LCLAS_NM": "활력·정신 건강",
+  "MLSFC_CD": "A06005",
+  "MLSFC_NM": "운동수행능력 향상",
+  "SCLAS_CD": "A06005000",
+  "SCLAS_NM": "운동수행능력 향상"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A07",
+  "LCLAS_NM": "여성·남성 건강",
+  "MLSFC_CD": "A07001",
+  "MLSFC_NM": "갱년기 여성 건강",
+  "SCLAS_CD": "A07001000",
+  "SCLAS_NM": "갱년기 여성 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A07",
+  "LCLAS_NM": "여성·남성 건강",
+  "MLSFC_CD": "A07002",
+  "MLSFC_NM": "갱년기 남성 건강",
+  "SCLAS_CD": "A07002000",
+  "SCLAS_NM": "갱년기 남성 건강"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A07",
+  "LCLAS_NM": "여성·남성 건강",
+  "MLSFC_CD": "A07003",
+  "MLSFC_NM": "월경 전 상태 개선",
+  "SCLAS_CD": "A07003000",
+  "SCLAS_NM": "월경 전 상태 개선"
+ },
+ {
+  "HELT_ITM_GRP_CD": "A",
+  "HELT_ITM_GRP_NM": "기능성 원료",
+  "LCLAS_CD": "A08",
+  "LCLAS_NM": "항산화",
+  "MLSFC_CD": "A08001",
+  "MLSFC_NM": "유해산소 세포 보호",
+  "SCLAS_CD": "A08001000",
+  "SCLAS_NM": "유해산소 세포 보호"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B01",
+  "LCLAS_NM": "비타민",
+  "MLSFC_CD": "B01001",
+  "MLSFC_NM": "비타민A",
+  "SCLAS_CD": "B01001000",
+  "SCLAS_NM": "비타민A"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B01",
+  "LCLAS_NM": "비타민",
+  "MLSFC_CD": "B01002",
+  "MLSFC_NM": "비타민C",
+  "SCLAS_CD": "B01002000",
+  "SCLAS_NM": "비타민C"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B01",
+  "LCLAS_NM": "비타민",
+  "MLSFC_CD": "B01003",
+  "MLSFC_NM": "비타민D",
+  "SCLAS_CD": "B01003000",
+  "SCLAS_NM": "비타민D"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B01",
+  "LCLAS_NM": "비타민",
+  "MLSFC_CD": "B01004",
+  "MLSFC_NM": "비타민E",
+  "SCLAS_CD": "B01004000",
+  "SCLAS_NM": "비타민E"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B01",
+  "LCLAS_NM": "비타민",
+  "MLSFC_CD": "B01005",
+  "MLSFC_NM": "비타민B군",
+  "SCLAS_CD": "B01005000",
+  "SCLAS_NM": "비타민B군"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B02",
+  "LCLAS_NM": "무기질",
+  "MLSFC_CD": "B02001",
+  "MLSFC_NM": "칼슘",
+  "SCLAS_CD": "B02001000",
+  "SCLAS_NM": "칼슘"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B02",
+  "LCLAS_NM": "무기질",
+  "MLSFC_CD": "B02002",
+  "MLSFC_NM": "마그네슘",
+  "SCLAS_CD": "B02002000",
+  "SCLAS_NM": "마그네슘"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B02",
+  "LCLAS_NM": "무기질",
+  "MLSFC_CD": "B02003",
+  "MLSFC_NM": "아연",
+  "SCLAS_CD": "B02003000",
+  "SCLAS_NM": "아연"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B02",
+  "LCLAS_NM": "무기질",
+  "MLSFC_CD": "B02004",
+  "MLSFC_NM": "철",
+  "SCLAS_CD": "B02004000",
+  "SCLAS_NM": "철"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B02",
+  "LCLAS_NM": "무기질",
+  "MLSFC_CD": "B02005",
+  "MLSFC_NM": "셀레늄",
+  "SCLAS_CD": "B02005000",
+  "SCLAS_NM": "셀레늄"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B03",
+  "LCLAS_NM": "단백질·아미노산",
+  "MLSFC_CD": "B03001",
+  "MLSFC_NM": "단백질",
+  "SCLAS_CD": "B03001000",
+  "SCLAS_NM": "단백질"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B03",
+  "LCLAS_NM": "단백질·아미노산",
+  "MLSFC_CD": "B03002",
+  "MLSFC_NM": "필수아미노산",
+  "SCLAS_CD": "B03002000",
+  "SCLAS_NM": "필수아미노산"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B04",
+  "LCLAS_NM": "지방산",
+  "MLSFC_CD": "B04001",
+  "MLSFC_NM": "오메가-3 지방산(EPA·DHA)",
+  "SCLAS_CD": "B04001000",
+  "SCLAS_NM": "오메가-3 지방산(EPA·DHA)"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B04",
+  "LCLAS_NM": "지방산",
+  "MLSFC_CD": "B04002",
+  "MLSFC_NM": "감마리놀렌산",
+  "SCLAS_CD": "B04002000",
+  "SCLAS_NM": "감마리놀렌산"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B05",
+  "LCLAS_NM": "식이섬유",
+  "MLSFC_CD": "B05001",
+  "MLSFC_NM": "수용성 식이섬유",
+  "SCLAS_CD": "B05001000",
+  "SCLAS_NM": "수용성 식이섬유"
+ },
+ {
+  "HELT_ITM_GRP_CD": "B",
+  "HELT_ITM_GRP_NM": "영양소",
+  "LCLAS_CD": "B05",
+  "LCLAS_NM": "식이섬유",
+  "MLSFC_CD": "B05002",
+  "MLSFC_NM": "불용성 식이섬유",
+  "SCLAS_CD": "B05002000",
+  "SCLAS_NM": "불용성 식이섬유"
+ }
+]
