@@ -3,6 +3,8 @@
 유통업계를 위한 **건강기능식품 산업 동향 대시보드**입니다.
 식품의약품안전처 식품안전나라 OPEN API 4종(기능성 원료인정 현황 / 개별인정형 정보 / 품목분류정보 / 영양DB)을 활용합니다.
 
+**정적 사이트**로 빌드되어 GitHub Pages에서 서비스되며, GitHub Actions가 **매일 05:00(KST) 데이터를 자동 갱신**해 재배포합니다.
+
 ## 화면 구성
 
 | 탭 | 내용 |
@@ -12,48 +14,40 @@
 | **업체 분석** | 업체별 인정 건수 랭킹, 지역별 분포, 업체별 보유 원료 목록 |
 | **기능성 분류 탐색** | 영양DB 대→중→소분류 트리, 분류별 관련 원료·품목 |
 
-기술 스택: Next.js (App Router, TypeScript) · Tailwind CSS v4 · recharts
+기술 스택: Next.js (App Router, TypeScript, 정적 내보내기) · Tailwind CSS v4 · recharts
 
-## 시작하기
+## 로컬에서 실행
 
 ```bash
 npm install
-cp .env.example .env.local   # 그리고 FOODSAFETY_API_KEY 에 인증키 입력
-npm run dev                  # http://localhost:3000
+npm run dev    # http://localhost:3000 — 샘플 데이터로 바로 동작
 ```
 
-인증키가 없거나 serviceId가 비어 있으면 **자동으로 내장 샘플 데이터로 동작**하므로,
-API 설정 없이도 바로 화면을 확인할 수 있습니다 (페이지 우측 상단에 "샘플 데이터" 배지 표시).
+실데이터로 보려면:
 
-## 실제 API 연결
+```bash
+cp .env.example .env.local          # FOODSAFETY_API_KEY 입력
+node scripts/test-api.mjs           # 인증키 검증 + serviceId 자동 탐색 → .env.local 에 반영
+node scripts/fetch-data.mjs         # data/live/*.json 으로 데이터 다운로드
+npm run dev                         # 배지가 "식약처 데이터"로 바뀜
+```
 
-1. 인증키 확인 및 serviceId 자동 탐색:
+## GitHub Pages 배포 (최초 1회 설정)
 
-   ```bash
-   node scripts/test-api.mjs
-   # 특정 후보를 직접 시험하려면: node scripts/test-api.mjs I0030 C003
-   ```
+1. **Settings → Pages** → Source를 **"GitHub Actions"** 로 변경
+2. **Settings → Secrets and variables → Actions → Secrets** 에 추가:
+   - `FOODSAFETY_API_KEY` = 발급받은 인증키
+3. (선택) 같은 화면 **Variables** 에 serviceId 추가 — `scripts/test-api.mjs` 로 찾은 값:
+   - `FSK_SERVICE_INDIVIDUAL`, `FSK_SERVICE_PRODUCT`, `FSK_SERVICE_NUTRITION`
+   - (`FSK_SERVICE_INGREDIENT` 는 기본값 I2820 사용)
+4. `main` 브랜치에 머지하면 자동 배포 → `https://<계정>.github.io/careworker/`
 
-   스크립트가 각 데이터셋의 필드 시그니처와 대조해 일치하는 serviceId를 찾아
-   `.env.local` 에 넣을 값을 알려줍니다.
-
-2. `.env.local` 에 결과 반영:
-
-   ```
-   FOODSAFETY_API_KEY=발급받은키
-   FSK_SERVICE_INGREDIENT=I2820
-   FSK_SERVICE_INDIVIDUAL=...
-   FSK_SERVICE_PRODUCT=...
-   FSK_SERVICE_NUTRITION=...
-   ```
-
-3. `npm run dev` 재시작 → 배지가 "실시간 데이터"로 바뀌고 `.data/` 폴더에 캐시 파일이 생성됩니다.
+이후에는 매일 새벽 자동으로 데이터를 받아 재배포하고, **Actions 탭 → "Deploy to GitHub Pages" → Run workflow** 로 수동 갱신도 가능합니다.
 
 ## 데이터 동작 방식
 
-- **3단계 폴백**: 실시간 API → 파일 캐시(`.data/*.json`, 기본 24시간 TTL) → 내장 샘플 데이터
-- API 호출은 전부 서버 사이드에서 실행되어 **인증키가 브라우저에 노출되지 않습니다**
-- 대시보드의 "데이터 새로고침" 버튼(또는 `POST /api/refresh`)으로 캐시를 강제 갱신할 수 있습니다
+- 빌드 시점에 `scripts/fetch-data.mjs` 가 API 전체 데이터를 `data/live/*.json` 으로 저장하고, 사이트는 이를 정적 HTML로 굽습니다 — **인증키는 GitHub Secrets에만 존재하고 사이트에 노출되지 않습니다**
+- 데이터를 받지 못한 데이터셋은 내장 샘플 데이터로 대체됩니다 (화면에 "샘플 데이터" 배지 표시)
 - 기능성 카테고리는 `src/lib/categories.ts` 의 키워드 규칙으로 자동 분류합니다 —
   실데이터에서 "기타" 비중이 높으면 이 파일에 키워드를 추가해 튜닝하세요
 - 원료↔품목 연결은 공유 키가 없어 원료명 텍스트 매칭 기반의 **추정치**입니다

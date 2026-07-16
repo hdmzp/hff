@@ -4,11 +4,8 @@ import TopBarChart from "@/components/charts/TopBarChart";
 import RecentApprovals from "@/components/dashboard/RecentApprovals";
 import StatCards from "@/components/dashboard/StatCards";
 import DataSourceBadge from "@/components/layout/DataSourceBadge";
-import RefreshButton from "@/components/layout/RefreshButton";
 import { recentApprovals, statCards, topCategories, topCompanies, yearlyTrend } from "@/lib/aggregate";
 import { buildMergedData } from "@/lib/merge";
-
-export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
   const data = await buildMergedData();
@@ -25,10 +22,7 @@ export default async function DashboardPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h1 className="display text-4xl text-on-dark sm:text-5xl">건강기능식품 산업 동향</h1>
-            <span className="flex items-center gap-2">
-              <DataSourceBadge source={data.sources.ingredient} fetchedAt={data.fetchedAt} />
-              <RefreshButton />
-            </span>
+            <DataSourceBadge source={data.sources.ingredient} fetchedAt={data.fetchedAt} />
           </div>
           <p className="mt-4 max-w-xl text-lg text-body-dark">
             식약처 기능성 원료 인정 현황과 품목 데이터를 한눈에 — 유통업계를 위한 트렌드

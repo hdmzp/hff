@@ -4,8 +4,6 @@ import SearchExplorer from "@/components/search/SearchExplorer";
 import { ALL_CATEGORIES } from "@/lib/categories";
 import { buildMergedData } from "@/lib/merge";
 
-export const dynamic = "force-dynamic";
-
 export default async function SearchPage() {
   const data = await buildMergedData();
 

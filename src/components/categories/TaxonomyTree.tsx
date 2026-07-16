@@ -1,25 +1,41 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import type { TaxonomyNode } from "@/lib/taxonomy";
 
-function NodeLink({ node, selected }: { node: TaxonomyNode; selected: string | null }) {
+function NodeButton({
+  node,
+  selected,
+  onSelect,
+}: {
+  node: TaxonomyNode;
+  selected: string | null;
+  onSelect: (code: string) => void;
+}) {
   const active = selected === node.code;
   return (
-    <Link
-      href={`/categories?node=${encodeURIComponent(node.code)}`}
-      scroll={false}
-      className={`block rounded-full px-3 py-1 text-sm transition-colors ${
+    <button
+      onClick={() => onSelect(node.code)}
+      className={`block rounded-full px-3 py-1 text-left text-sm transition-colors ${
         active ? "bg-primary font-medium text-on-primary" : "text-body hover:bg-surface-soft"
       }`}
     >
       {node.name}
-    </Link>
+    </button>
   );
 }
 
-function Branch({ node, selected, depth }: { node: TaxonomyNode; selected: string | null; depth: number }) {
+function Branch({
+  node,
+  selected,
+  onSelect,
+  depth,
+}: {
+  node: TaxonomyNode;
+  selected: string | null;
+  onSelect: (code: string) => void;
+  depth: number;
+}) {
   const [open, setOpen] = useState(depth === 0);
   const hasChildren = node.children.length > 0;
   return (
@@ -36,12 +52,12 @@ function Branch({ node, selected, depth }: { node: TaxonomyNode; selected: strin
         ) : (
           <span className="w-5 shrink-0" />
         )}
-        <NodeLink node={node} selected={selected} />
+        <NodeButton node={node} selected={selected} onSelect={onSelect} />
       </div>
       {hasChildren && open && (
         <ul className="ml-5 mt-1 space-y-1 border-l border-hairline pl-3">
           {node.children.map((child) => (
-            <Branch key={child.code} node={child} selected={selected} depth={depth + 1} />
+            <Branch key={child.code} node={child} selected={selected} onSelect={onSelect} depth={depth + 1} />
           ))}
         </ul>
       )}
@@ -49,7 +65,15 @@ function Branch({ node, selected, depth }: { node: TaxonomyNode; selected: strin
   );
 }
 
-export default function TaxonomyTree({ tree, selected }: { tree: TaxonomyNode[]; selected: string | null }) {
+export default function TaxonomyTree({
+  tree,
+  selected,
+  onSelect,
+}: {
+  tree: TaxonomyNode[];
+  selected: string | null;
+  onSelect: (code: string) => void;
+}) {
   return (
     <ul className="space-y-2">
       {tree.map((group) => (
@@ -57,7 +81,7 @@ export default function TaxonomyTree({ tree, selected }: { tree: TaxonomyNode[];
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-mute">{group.name}</p>
           <ul className="space-y-1">
             {group.children.map((node) => (
-              <Branch key={node.code} node={node} selected={selected} depth={0} />
+              <Branch key={node.code} node={node} selected={selected} onSelect={onSelect} depth={0} />
             ))}
           </ul>
         </li>
