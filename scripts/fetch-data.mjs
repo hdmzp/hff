@@ -38,10 +38,30 @@ const MAX_ROWS = 50_000;
 const OUT_DIR = path.join(process.cwd(), "data", "live");
 
 async function fetchPage(serviceId, start, end) {
-  const url = `${BASE}/${KEY}/${serviceId}/json/${start}/${end}`;
-  const res = await fetch(url, { signal: AbortSignal.timeout(20_000) });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const json = await res.json();
+  // http 실패 시 https 로도 재시도
+  const bases = BASE.startsWith("http://") ? [BASE, BASE.replace("http://", "https://")] : [BASE];
+  let lastErr;
+  let text = "";
+  for (const base of bases) {
+    try {
+      const url = `${base}/${KEY}/${serviceId}/json/${start}/${end}`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(20_000) });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      text = await res.text();
+      return parseEnvelope(serviceId, text);
+    } catch (err) {
+      lastErr = err;
+    }
+  }
+  // JSON 이 아닌 HTML 이 돌아오면 해외 IP 차단 안내 페이지일 가능성이 큼
+  if (text.trimStart().startsWith("<")) {
+    throw new Error("HTML 응답 수신 — 해외 IP 차단으로 추정 (한국 IP에서 scripts/fetch-data.mjs 실행 필요)");
+  }
+  throw lastErr;
+}
+
+function parseEnvelope(serviceId, text) {
+  const json = JSON.parse(text);
   const envelope = json[serviceId];
   if (!envelope) {
     const code = json?.RESULT?.CODE ?? "?";
