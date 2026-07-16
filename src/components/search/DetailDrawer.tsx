@@ -131,6 +131,7 @@ export default function DetailDrawer({ id, onClose }: { id: string | null; onClo
           <div className="mt-6">
             <CategoryChips categories={payload.detail.categories} />
             <div className="mt-4">
+              <Row label="업체명" value={payload.detail.company} />
               <Row label="주된 기능성" value={payload.detail.functionality} />
               <Row label="성분명" value={payload.detail.ingredients} />
               <Row

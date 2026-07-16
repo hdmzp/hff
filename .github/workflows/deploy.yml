@@ -50,6 +50,7 @@ jobs:
           FSK_SERVICE_INDIVIDUAL: ${{ vars.FSK_SERVICE_INDIVIDUAL }}
           FSK_SERVICE_PRODUCT: ${{ vars.FSK_SERVICE_PRODUCT }}
           FSK_SERVICE_NUTRITION: ${{ vars.FSK_SERVICE_NUTRITION }}
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
 
       - name: Build static site
         run: npm run build
