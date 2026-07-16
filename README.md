@@ -34,13 +34,13 @@ npm run dev                         # 배지가 "식약처 데이터"로 바뀜
 
 ## GitHub Pages 배포 (최초 1회 설정)
 
-1. **Settings → Pages** → Source를 **"GitHub Actions"** 로 변경
-2. **Settings → Secrets and variables → Actions → Secrets** 에 추가:
+1. **Settings → Secrets and variables → Actions → Secrets** 에 추가:
    - `FOODSAFETY_API_KEY` = 발급받은 인증키
-3. (선택) 같은 화면 **Variables** 에 serviceId 추가 — `scripts/test-api.mjs` 로 찾은 값:
+2. (선택) 같은 화면 **Variables** 에 serviceId 추가 — `scripts/test-api.mjs` 로 찾은 값:
    - `FSK_SERVICE_INDIVIDUAL`, `FSK_SERVICE_PRODUCT`, `FSK_SERVICE_NUTRITION`
    - (`FSK_SERVICE_INGREDIENT` 는 기본값 I2820 사용)
-4. `main` 브랜치에 머지하면 자동 배포 → `https://<계정>.github.io/<저장소이름>/`
+3. `main` 브랜치에 푸시하면 자동 배포 → `https://<계정>.github.io/<저장소이름>/`
+   (Pages 활성화는 워크플로가 자동 처리)
 
 이후에는 매일 새벽 자동으로 데이터를 받아 재배포하고, **Actions 탭 → "Deploy to GitHub Pages" → Run workflow** 로 수동 갱신도 가능합니다.
 
