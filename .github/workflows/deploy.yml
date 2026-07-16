@@ -1,10 +1,10 @@
 # GitHub Pages 배포 + 매일 데이터 자동 갱신
 #
 # 최초 설정 (저장소에서 1회):
-#   1. Settings → Pages → Source 를 "GitHub Actions" 로 변경
-#   2. Settings → Secrets and variables → Actions → Secrets 에 FOODSAFETY_API_KEY 추가
-#   3. (선택) 같은 화면의 Variables 에 FSK_SERVICE_INDIVIDUAL / FSK_SERVICE_PRODUCT /
+#   1. Settings → Secrets and variables → Actions → Secrets 에 FOODSAFETY_API_KEY 추가
+#   2. (선택) 같은 화면의 Variables 에 FSK_SERVICE_INDIVIDUAL / FSK_SERVICE_PRODUCT /
 #      FSK_SERVICE_NUTRITION 추가 — scripts/test-api.mjs 로 찾은 serviceId
+# (Pages 활성화는 아래 configure-pages 단계가 자동으로 처리)
 name: Deploy to GitHub Pages
 
 on:
@@ -28,6 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Setup Pages (자동 활성화)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/setup-node@v4
         with:
