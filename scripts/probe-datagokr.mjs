@@ -85,23 +85,30 @@ if (KEY) {
   candidates.add("https://apis.data.go.kr/1471000/HtfsInfoService04/getHtfsItem01");
   candidates.add("https://apis.data.go.kr/1471000/HtfsInfoService02/getHtfsItem01");
 
+  // Decoding 키(원문)와 Encoding 키(이미 %가 포함된 형태) 모두 대응
+  const keyForms = [
+    ["encodeURIComponent", encodeURIComponent(KEY)],
+    ["원문 그대로", KEY],
+  ];
   for (const base of candidates) {
-    try {
-      const url = `${base}?serviceKey=${encodeURIComponent(KEY)}&pageNo=1&numOfRows=2&type=json`;
-      const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) });
-      const text = await res.text();
-      let summary;
+    for (const [formName, keyValue] of keyForms) {
       try {
-        const json = JSON.parse(text);
-        const item =
-          json?.body?.items?.[0]?.item ?? json?.body?.items?.[0] ?? json?.response?.body?.items?.item?.[0];
-        summary = `JSON OK · totalCount=${json?.body?.totalCount ?? json?.response?.body?.totalCount ?? "?"} · 필드=${item ? Object.keys(item).slice(0, 12).join(",") : "(item 없음)"}`;
-      } catch {
-        summary = `비JSON 응답 (앞 120자): ${text.slice(0, 120).replace(/\s+/g, " ")}`;
+        const url = `${base}?serviceKey=${keyValue}&ServiceKey=${keyValue}&pageNo=1&numOfRows=2&type=json`;
+        const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(30_000) });
+        const text = await res.text();
+        let summary;
+        try {
+          const json = JSON.parse(text);
+          const item =
+            json?.body?.items?.[0]?.item ?? json?.body?.items?.[0] ?? json?.response?.body?.items?.item?.[0];
+          summary = `JSON OK · totalCount=${json?.body?.totalCount ?? json?.response?.body?.totalCount ?? "?"} · 필드=${item ? Object.keys(item).slice(0, 14).join(",") : "(item 없음)"}`;
+        } catch {
+          summary = `비JSON 응답 (앞 150자): ${text.slice(0, 150).replace(/\s+/g, " ")}`;
+        }
+        console.log(`${base} [키:${formName}]\n  → HTTP ${res.status} · ${summary}`);
+      } catch (err) {
+        console.log(`${base} [키:${formName}]\n  → ✗ ${err?.message ?? err}`);
       }
-      console.log(`${base}\n  → HTTP ${res.status} · ${summary}`);
-    } catch (err) {
-      console.log(`${base}\n  → ✗ ${err?.message ?? err}`);
     }
   }
 } else {
