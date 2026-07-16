@@ -43,9 +43,32 @@ for (const page of PAGES) {
         .trim();
       console.log("End Point 주변:", snippet.slice(0, 300));
     }
+
+    // 스웨거/상세기능 관련 흔적 (JS 렌더링 페이지 대응)
+    for (const pattern of [/oas\/docs[^"'\s<>]*/g, /infuser[^"'\s<>]*/g, /swagger[^"'\s<>]{0,80}/gi, /operationUrl[^,}\n]{0,120}/g, /publicDataDetailPk[^,}\n]{0,80}/g]) {
+      const hits = [...new Set(html.match(pattern) ?? [])].slice(0, 5);
+      if (hits.length) console.log(`  힌트(${pattern.source.slice(0, 12)}…):`, hits);
+    }
     found[page.id] = urls;
   } catch (err) {
     console.log(`✗ 문서 페이지 접근 실패: ${err?.message ?? err}`);
+  }
+}
+
+// 키 없이도 각 게이트웨이의 해외 접근 가능 여부 확인 (키 오류 응답 = 접근 가능)
+console.log("\n===== 게이트웨이 접근성 시험 (키 미포함) =====");
+const REACHABILITY = [
+  "https://apis.data.go.kr/1471000/HtfsInfoService03/getHtfsItem01?serviceKey=test&type=json&pageNo=1&numOfRows=1",
+  "http://data.mfds.go.kr/openapi/HtfsInfoService/getHtfsItem?ServiceKey=test&pageNo=1&numOfRows=1",
+  "https://data.mfds.go.kr/",
+];
+for (const url of REACHABILITY) {
+  try {
+    const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(25_000) });
+    const text = await res.text();
+    console.log(`${url.split("?")[0]}\n  → HTTP ${res.status} · 앞 150자: ${text.slice(0, 150).replace(/\s+/g, " ")}`);
+  } catch (err) {
+    console.log(`${url.split("?")[0]}\n  → ✗ ${err?.message ?? err}`);
   }
 }
 
