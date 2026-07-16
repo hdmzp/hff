@@ -62,6 +62,21 @@ git add data/live && git commit -m "데이터 갱신" && git push
 
 푸시하면 자동으로 재배포되고, CI가 API 접근에 실패해도 커밋된 데이터로 빌드됩니다.
 데이터 갱신 주기는 원료 인정 특성상 월 1회 정도면 충분합니다.
+
+### Cloudflare 프록시 (선택 — 식품안전나라 데이터도 완전 자동화)
+
+`proxy/worker.js` 를 Cloudflare Workers(무료)에 배포하면 CI가 프록시를 경유해
+식품안전나라 API를 호출합니다. 설정:
+
+1. [dash.cloudflare.com](https://dash.cloudflare.com) 가입 → **Workers & Pages → Create Worker**
+2. 코드 편집기에 `proxy/worker.js` 내용을 붙여넣고 **Deploy**
+3. Worker **Settings → Variables and Secrets** 에 `PROXY_TOKEN` 추가 (임의의 긴 문자열)
+4. Worker **Settings → Placement** 에서 **Smart Placement** 활성화 (한국 근처 실행 유도)
+5. 저장소 Secrets 에 추가:
+   - `FOODSAFETY_PROXY_URL` = `https://<워커이름>.<계정>.workers.dev`
+   - `FOODSAFETY_PROXY_TOKEN` = 3에서 정한 문자열
+
+CI는 직접 호출 실패 시 자동으로 프록시를 경유합니다. (프록시도 차단되면 커밋 데이터 사용)
 - 기능성 카테고리는 `src/lib/categories.ts` 의 키워드 규칙으로 자동 분류합니다 —
   실데이터에서 "기타" 비중이 높으면 이 파일에 키워드를 추가해 튜닝하세요
 - 원료↔품목 연결은 공유 키가 없어 원료명 텍스트 매칭 기반의 **추정치**입니다

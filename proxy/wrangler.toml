@@ -1,0 +1,10 @@
+# wrangler CLI 로 배포하는 경우의 설정 (대시보드에서 코드 붙여넣기로 배포해도 무방)
+#   npx wrangler deploy
+#   npx wrangler secret put PROXY_TOKEN
+name = "hff-foodsafety-proxy"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+# 백엔드(한국) 가까이에서 실행되도록 스마트 배치 활성화
+[placement]
+mode = "smart"
