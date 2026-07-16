@@ -49,7 +49,8 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          BASE_PATH: /careworker
+          # 저장소 이름이 바뀌어도 Pages 경로(https://<계정>.github.io/<저장소>/)를 자동 반영
+          BASE_PATH: /${{ github.event.repository.name }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

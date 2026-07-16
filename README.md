@@ -40,7 +40,7 @@ npm run dev                         # 배지가 "식약처 데이터"로 바뀜
 3. (선택) 같은 화면 **Variables** 에 serviceId 추가 — `scripts/test-api.mjs` 로 찾은 값:
    - `FSK_SERVICE_INDIVIDUAL`, `FSK_SERVICE_PRODUCT`, `FSK_SERVICE_NUTRITION`
    - (`FSK_SERVICE_INGREDIENT` 는 기본값 I2820 사용)
-4. `main` 브랜치에 머지하면 자동 배포 → `https://<계정>.github.io/careworker/`
+4. `main` 브랜치에 머지하면 자동 배포 → `https://<계정>.github.io/<저장소이름>/`
 
 이후에는 매일 새벽 자동으로 데이터를 받아 재배포하고, **Actions 탭 → "Deploy to GitHub Pages" → Run workflow** 로 수동 갱신도 가능합니다.
 
