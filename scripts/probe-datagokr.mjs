@@ -81,6 +81,9 @@ if (KEY) {
   }
   // 알려진 후보 추가
   candidates.add("https://apis.data.go.kr/1471000/HtfsInfoService03/getHtfsItem01");
+  candidates.add("https://apis.data.go.kr/1471000/HtfsInfoService03/getHtfsList01");
+  candidates.add("https://apis.data.go.kr/1471000/HtfsInfoService04/getHtfsItem01");
+  candidates.add("https://apis.data.go.kr/1471000/HtfsInfoService02/getHtfsItem01");
 
   for (const base of candidates) {
     try {
