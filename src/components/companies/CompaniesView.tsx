@@ -78,16 +78,15 @@ export default function CompaniesView({
         )}
       </div>
 
-      {/* 지역 분포 + 업체 상세 */}
+      {/* 업체 상세 (상단) + 지역 분포 (하단) */}
       <div className="lg:col-span-2">
-        <h2 className="display text-2xl">지역별 분포</h2>
-        <p className="mt-2 text-sm text-body">업체 주소 기준 · 해외 소재는 해외/기타로 집계</p>
-        <div className="mt-4 rounded-lg bg-surface-card p-6">
-          <TopBarChart data={regions} height={Math.max(240, regions.length * 32)} />
-        </div>
-
+        {!selected && (
+          <div className="mb-8 flex min-h-24 items-center justify-center rounded-lg bg-surface-card p-6">
+            <p className="text-sm text-body">왼쪽 랭킹에서 업체명을 클릭하면 상세가 여기에 표시됩니다.</p>
+          </div>
+        )}
         {selected && (
-          <div className="mt-8 rounded-lg bg-surface-dark-card p-6 text-on-dark">
+          <div className="mb-8 rounded-lg bg-surface-dark-card p-6 text-on-dark">
             <p className="text-xs text-mute-dark">업체 상세</p>
             <h3 className="display mt-1 text-2xl">{selected.name}</h3>
             <p className="mt-2 text-sm text-body-dark">
@@ -113,6 +112,12 @@ export default function CompaniesView({
             </ul>
           </div>
         )}
+
+        <h2 className="display text-2xl">지역별 분포</h2>
+        <p className="mt-2 text-sm text-body">업체 주소 기준 · 해외 소재는 해외/기타로 집계</p>
+        <div className="mt-4 rounded-lg bg-surface-card p-6">
+          <TopBarChart data={regions} height={Math.max(240, regions.length * 32)} />
+        </div>
       </div>
     </div>
   );

@@ -15,7 +15,13 @@ const BLUE = "#0070d1";
 const INK_MUTE = "#6b6b6b";
 const GRID = "#f3f3f3";
 
-export default function YearlyTrendChart({ data }: { data: YearCount[] }) {
+export default function YearlyTrendChart({
+  data,
+  onBarClick,
+}: {
+  data: YearCount[];
+  onBarClick?: (year: number) => void;
+}) {
   if (data.length === 0) {
     return <p className="py-12 text-center text-sm text-mute">표시할 연도별 데이터가 없습니다.</p>;
   }
@@ -43,7 +49,17 @@ export default function YearlyTrendChart({ data }: { data: YearCount[] }) {
             labelFormatter={(label) => `${label}년`}
             contentStyle={{ borderRadius: 8, border: "1px solid #f3f3f3", fontSize: 13 }}
           />
-          <Bar dataKey="count" fill={BLUE} radius={[4, 4, 0, 0]} maxBarSize={28} />
+          <Bar
+            dataKey="count"
+            fill={BLUE}
+            radius={[4, 4, 0, 0]}
+            maxBarSize={28}
+            cursor={onBarClick ? "pointer" : undefined}
+            onClick={(entry: { payload?: YearCount }) => {
+              const year = entry?.payload?.year;
+              if (year !== undefined) onBarClick?.(year);
+            }}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

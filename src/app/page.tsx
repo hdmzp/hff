@@ -1,6 +1,5 @@
 import Link from "next/link";
-import YearlyTrendChart from "@/components/charts/YearlyTrendChart";
-import TopBarChart from "@/components/charts/TopBarChart";
+import DashboardCharts, { type SlimIngredient } from "@/components/dashboard/DashboardCharts";
 import RecentApprovals from "@/components/dashboard/RecentApprovals";
 import StatCards from "@/components/dashboard/StatCards";
 import DataSourceBadge from "@/components/layout/DataSourceBadge";
@@ -14,6 +13,15 @@ export default async function DashboardPage() {
   const catTop = topCategories([...data.ingredients, ...data.products], 10);
   const companyTop = topCompanies(data.ingredients, 10);
   const recent = recentApprovals(data.ingredients, 10);
+
+  // 차트 팝업용 슬림 프로젝션 (장문 필드 제외)
+  const slimIngredients: SlimIngredient[] = data.ingredients.map((d) => ({
+    name: d.name,
+    company: d.company,
+    year: d.year,
+    dateLabel: d.dateLabel,
+    categories: d.categories,
+  }));
 
   return (
     <div>
@@ -34,37 +42,14 @@ export default async function DashboardPage() {
         </div>
       </section>
 
-      {/* light canvas: 차트 */}
+      {/* light canvas: 인터랙티브 차트 */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <h2 className="display text-3xl">연도별 기능성 원료 인정 추이</h2>
-        <p className="mt-2 text-sm text-body">
-          기능성 원료 인정(신규) 건수 기준 · 인정일자 미상 데이터는 제외
-        </p>
-        <div className="mt-6 rounded-lg bg-surface-card p-6">
-          <YearlyTrendChart data={trend} />
-        </div>
-
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div>
-            <h2 className="display text-2xl">기능성 카테고리 TOP 10</h2>
-            <p className="mt-2 text-sm text-body">원료·품목의 기능성 내용 자동 분류 기준</p>
-            <div className="mt-4 rounded-lg bg-surface-card p-6">
-              <TopBarChart data={catTop} />
-            </div>
-          </div>
-          <div>
-            <h2 className="display text-2xl">원료 인정 업체 TOP 10</h2>
-            <p className="mt-2 text-sm text-body">
-              업체별 기능성 원료 인정 건수 ·{" "}
-              <Link href="/companies" className="text-link hover:underline">
-                업체 분석 전체 보기
-              </Link>
-            </p>
-            <div className="mt-4 rounded-lg bg-surface-card p-6">
-              <TopBarChart data={companyTop} />
-            </div>
-          </div>
-        </div>
+        <DashboardCharts
+          trend={trend}
+          catTop={catTop}
+          companyTop={companyTop}
+          ingredients={slimIngredients}
+        />
       </section>
 
       {/* 최근 인정 원료 */}

@@ -5,7 +5,7 @@
 //
 // 배포 방법은 저장소 README의 "Cloudflare 프록시" 절 참고.
 
-export default {
+const worker = {
   async fetch(request, env) {
     if (request.method !== "GET") {
       return new Response("Method not allowed", { status: 405 });
@@ -38,3 +38,5 @@ export default {
     }
   },
 };
+
+export default worker;
