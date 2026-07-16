@@ -20,10 +20,12 @@ export default function TopBarChart({
   data,
   unit = "건",
   height = 320,
+  onBarClick,
 }: {
   data: NamedCount[];
   unit?: string;
   height?: number;
+  onBarClick?: (name: string) => void;
 }) {
   if (data.length === 0) {
     return <p className="py-12 text-center text-sm text-mute">표시할 데이터가 없습니다.</p>;
@@ -59,6 +61,11 @@ export default function TopBarChart({
             radius={[0, 4, 4, 0]}
             maxBarSize={18}
             label={{ position: "right", fill: INK_MUTE, fontSize: 12 }}
+            cursor={onBarClick ? "pointer" : undefined}
+            onClick={(entry: { payload?: NamedCount }) => {
+              const name = entry?.payload?.name;
+              if (name) onBarClick?.(name);
+            }}
           />
         </BarChart>
       </ResponsiveContainer>
