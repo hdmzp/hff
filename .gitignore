@@ -46,5 +46,3 @@ next-env.d.ts
 # allow env template
 !.env.example
 
-# CI가 빌드 시점에 받아오는 실데이터
-/data/live/
