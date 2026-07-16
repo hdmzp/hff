@@ -8,6 +8,22 @@ type Payload =
   | { kind: "원료"; detail: IngredientDetail }
   | { kind: "품목"; detail: ProductDetail };
 
+// 정적 파일(details.json)을 최초 1회만 내려받아 메모리에 캐시한다
+let detailsCache: Promise<Record<string, Payload>> | null = null;
+function loadDetails(): Promise<Record<string, Payload>> {
+  if (!detailsCache) {
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+    detailsCache = fetch(`${base}/details.json`).then((res) => {
+      if (!res.ok) throw new Error("상세 데이터를 불러오지 못했습니다.");
+      return res.json();
+    });
+    detailsCache.catch(() => {
+      detailsCache = null; // 실패 시 다음 시도에서 재요청
+    });
+  }
+  return detailsCache;
+}
+
 function Row({ label, value }: { label: string; value?: string }) {
   if (!value || value === "-") return null;
   return (
@@ -25,13 +41,12 @@ export default function DetailDrawer({ id, onClose }: { id: string | null; onClo
   useEffect(() => {
     if (!id) return;
     let cancelled = false;
-    fetch(`/api/item?id=${encodeURIComponent(id)}`)
-      .then(async (res) => {
-        if (!res.ok) throw new Error((await res.json()).error ?? "조회 실패");
-        return res.json() as Promise<Payload>;
-      })
-      .then((json) => {
-        if (!cancelled) setResult({ id, payload: json });
+    loadDetails()
+      .then((map) => {
+        if (cancelled) return;
+        const payload = map[id];
+        if (payload) setResult({ id, payload });
+        else setResult({ id, error: "항목을 찾을 수 없습니다." });
       })
       .catch((err) => {
         if (!cancelled) setResult({ id, error: err instanceof Error ? err.message : "조회 실패" });
