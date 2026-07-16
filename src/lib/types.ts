@@ -27,6 +27,7 @@ export interface RawIndividualInfo {
 /** ③ 건강기능식품 품목분류정보 */
 export interface RawProduct {
   PRDCT_NM: string; // 품목명
+  BSSH_NM?: string; // 업체명 (data.go.kr 경유 데이터에만 존재)
   IFTKN_ATNT_MATR_CN: string; // 섭취시 주의사항
   PRIMARY_FNCLTY: string; // 주된 기능성
   DAY_INTK_LOWLIMIT: string;
@@ -112,6 +113,7 @@ export interface IngredientDetail {
 /** 품목 상세 */
 export interface ProductDetail {
   name: string;
+  company?: string;
   functionality: string;
   ingredients: string;
   intakeLow: string;

@@ -77,6 +77,7 @@ async function buildMergedDataUncached(): Promise<MergedData> {
 
   const products: ProductDetail[] = (prd.rows as RawProduct[]).map((row) => ({
     name: row.PRDCT_NM?.trim() || "(품목명 없음)",
+    company: row.BSSH_NM?.trim() || undefined,
     functionality: row.PRIMARY_FNCLTY?.trim() || "",
     ingredients: row.SKLL_IX_IRDNT_RAWMTRL?.trim() || "-",
     intakeLow: row.DAY_INTK_LOWLIMIT?.trim() || "-",
@@ -120,6 +121,7 @@ async function buildMergedDataUncached(): Promise<MergedData> {
         id: `prd:${i}`,
         kind: "품목",
         name: d.name,
+        company: d.company,
         year: d.year,
         dateLabel: d.createdLabel,
         categories: d.categories,

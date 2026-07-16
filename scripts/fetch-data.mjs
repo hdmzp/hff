@@ -90,32 +90,98 @@ async function fetchAllRows(serviceId) {
   return rows;
 }
 
-if (!KEY) {
-  console.warn("△ FOODSAFETY_API_KEY 없음 — 전체 데이터셋을 샘플 데이터로 빌드합니다.");
-  process.exit(0);
+// ---- 공공데이터포털(data.go.kr) 경유: 건강기능식품정보(품목) ----
+// 식품안전나라가 해외 IP를 차단하므로, GitHub Actions에서는 이 경로가 품목 데이터의 주 수단.
+const DGK_KEY = (env.DATA_GO_KR_SERVICE_KEY ?? "").trim();
+const DGK_PRODUCT_ENDPOINT =
+  (env.DGK_PRODUCT_ENDPOINT ?? "https://apis.data.go.kr/1471000/HtfsInfoService03/getHtfsItem01").trim();
+const DGK_PAGE_SIZE = 100;
+
+async function fetchProductsFromDataGoKr() {
+  const rows = [];
+  let pageNo = 1;
+  let total = Infinity;
+  while (rows.length < total && rows.length < MAX_ROWS) {
+    const url = `${DGK_PRODUCT_ENDPOINT}?serviceKey=${encodeURIComponent(DGK_KEY)}&pageNo=${pageNo}&numOfRows=${DGK_PAGE_SIZE}&type=json`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(20_000) });
+    const text = await res.text();
+    if (!res.ok) throw new Error(`HTTP ${res.status} (${text.slice(0, 80).replace(/\s+/g, " ")})`);
+    let json;
+    try {
+      json = JSON.parse(text);
+    } catch {
+      throw new Error(`비JSON 응답: ${text.slice(0, 80).replace(/\s+/g, " ")}`);
+    }
+    const header = json.header ?? json.response?.header ?? {};
+    const code = header.resultCode ?? "?";
+    if (code !== "00") throw new Error(`${code}: ${header.resultMsg ?? "API 오류"}`);
+    const body = json.body ?? json.response?.body ?? {};
+    let items = body.items ?? [];
+    if (!Array.isArray(items)) items = items.item ?? [];
+    const pageItems = items.map((entry) => entry?.item ?? entry).filter(Boolean);
+    total = Number(body.totalCount ?? pageItems.length) || pageItems.length;
+    rows.push(...pageItems);
+    if (pageItems.length < DGK_PAGE_SIZE) break;
+    pageNo++;
+    await new Promise((r) => setTimeout(r, 120)); // 게이트웨이 부하 방지
+  }
+  // 사이트 내부 필드명(품목분류정보 스키마)으로 매핑
+  return rows.map((item) => ({
+    PRDCT_NM: item.PRDUCT ?? item.PRDCT_NM ?? "",
+    BSSH_NM: item.ENTRPS ?? "",
+    IFTKN_ATNT_MATR_CN: item.INTAKE_HINT1 ?? "",
+    PRIMARY_FNCLTY: item.MAIN_FNCTN ?? "",
+    DAY_INTK_LOWLIMIT: "",
+    DAY_INTK_HIGHLIMIT: "",
+    INTK_UNIT: "",
+    INTK_MEMO: item.SRV_USE ?? "",
+    SKLL_IX_IRDNT_RAWMTRL: item.RAWMTRL_NM ?? "",
+    CRET_DTM: item.REGIST_DT ?? "",
+    LAST_UPDT_DTM: item.REGIST_DT ?? "",
+    STTEMNT_NO: item.STTEMNT_NO ?? "",
+  }));
 }
 
 mkdirSync(OUT_DIR, { recursive: true });
 let successCount = 0;
+const saved = new Set();
 
-for (const ds of DATASETS) {
-  const serviceId = (env[ds.envVar] ?? "").trim();
-  if (!serviceId) {
-    console.warn(`△ ${ds.label}: ${ds.envVar} 미설정 — 샘플 데이터 사용`);
-    continue;
+function save(name, label, sourceLabel, rows) {
+  writeFileSync(path.join(OUT_DIR, `${name}.json`), JSON.stringify({ fetchedAt: new Date().toISOString(), rows }));
+  console.log(`✓ ${label} (${sourceLabel}): ${rows.length}건 저장`);
+  saved.add(name);
+  successCount++;
+}
+
+// 1순위: 식품안전나라 (국내 실행 시 동작)
+if (KEY) {
+  for (const ds of DATASETS) {
+    const serviceId = (env[ds.envVar] ?? "").trim();
+    if (!serviceId) {
+      console.warn(`△ ${ds.label}: ${ds.envVar} 미설정`);
+      continue;
+    }
+    try {
+      const rows = await fetchAllRows(serviceId);
+      if (rows.length === 0) throw new Error("0건 반환");
+      save(ds.name, ds.label, serviceId, rows);
+    } catch (err) {
+      console.warn(`✗ ${ds.label} (${serviceId}): ${err?.message ?? err}`);
+    }
   }
+} else {
+  console.warn("△ FOODSAFETY_API_KEY 없음 — 식품안전나라 경로 건너뜀");
+}
+
+// 2순위: 품목 데이터는 data.go.kr 경유 (해외에서도 동작)
+if (!saved.has("product") && DGK_KEY) {
   try {
-    const rows = await fetchAllRows(serviceId);
+    const rows = await fetchProductsFromDataGoKr();
     if (rows.length === 0) throw new Error("0건 반환");
-    writeFileSync(
-      path.join(OUT_DIR, `${ds.name}.json`),
-      JSON.stringify({ fetchedAt: new Date().toISOString(), rows }),
-    );
-    console.log(`✓ ${ds.label} (${serviceId}): ${rows.length}건 저장`);
-    successCount++;
+    save("product", "품목분류정보", "data.go.kr", rows);
   } catch (err) {
-    console.warn(`✗ ${ds.label} (${serviceId}): ${err?.message ?? err} — 샘플 데이터 사용`);
+    console.warn(`✗ 품목분류정보 (data.go.kr): ${err?.message ?? err}`);
   }
 }
 
-console.log(`\n${successCount}/${DATASETS.length} 데이터셋 수신 완료`);
+console.log(`\n${successCount}/${DATASETS.length} 데이터셋 수신 완료 (미수신 데이터셋은 커밋본 또는 샘플 데이터 사용)`);
