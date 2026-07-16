@@ -1,9 +1,15 @@
 import { mkdir, readFile, rename, writeFile, unlink } from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { getConfig } from "./config";
 import type { DatasetName } from "./types";
 
-const CACHE_DIR = path.join(process.cwd(), ".data");
+// 서버리스(Vercel 등)는 프로젝트 폴더가 읽기 전용이므로 임시 디렉터리를 사용
+const CACHE_DIR = process.env.CACHE_DIR?.trim()
+  ? process.env.CACHE_DIR.trim()
+  : process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME
+    ? path.join(os.tmpdir(), "careworker-data")
+    : path.join(process.cwd(), ".data");
 
 interface CacheFile {
   fetchedAt: string;

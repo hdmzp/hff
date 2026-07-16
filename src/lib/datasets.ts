@@ -47,7 +47,13 @@ async function loadDatasetUncached<N extends DatasetName>(
   try {
     const rows = await fetchAllRows(serviceId);
     if (rows.length === 0) throw new Error("API가 0건을 반환했습니다.");
-    const fetchedAt = await writeCache(name, rows);
+    // 캐시 쓰기 실패(읽기 전용 파일시스템 등)가 API 성공을 무효화하면 안 된다
+    let fetchedAt = new Date().toISOString();
+    try {
+      fetchedAt = await writeCache(name, rows);
+    } catch (cacheErr) {
+      console.warn(`[foodsafety] ${name} 캐시 저장 실패:`, cacheErr instanceof Error ? cacheErr.message : cacheErr);
+    }
     lastFailureAt.delete(name);
     return { rows: rows as unknown as RowOf<N>[], source: "api", fetchedAt };
   } catch (err) {
