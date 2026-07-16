@@ -25,6 +25,9 @@ function loadEnv() {
 const env = loadEnv();
 const KEY = (env.FOODSAFETY_API_KEY ?? "").trim();
 const BASE = (env.FOODSAFETY_BASE_URL ?? "http://openapi.foodsafetykorea.go.kr/api").trim();
+// Cloudflare Worker 프록시 (해외 IP 차단 우회) — 설정 시 식품안전나라 호출을 프록시로 대체
+const PROXY_URL = (env.FOODSAFETY_PROXY_URL ?? "").trim().replace(/\/$/, "");
+const PROXY_TOKEN = (env.FOODSAFETY_PROXY_TOKEN ?? "").trim();
 
 const DATASETS = [
   { name: "ingredient", envVar: "FSK_SERVICE_INGREDIENT", label: "기능성 원료인정 현황" },
@@ -38,14 +41,16 @@ const MAX_ROWS = 50_000;
 const OUT_DIR = path.join(process.cwd(), "data", "live");
 
 async function fetchPage(serviceId, start, end) {
-  // http 실패 시 https 로도 재시도
+  // 직접 호출(http/https) 실패 시 프록시로 재시도
   const bases = BASE.startsWith("http://") ? [BASE, BASE.replace("http://", "https://")] : [BASE];
+  if (PROXY_URL) bases.push(`${PROXY_URL}/api`);
   let lastErr;
   let text = "";
   for (const base of bases) {
     try {
       const url = `${base}/${KEY}/${serviceId}/json/${start}/${end}`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(20_000) });
+      const headers = PROXY_URL && base.startsWith(PROXY_URL) && PROXY_TOKEN ? { "x-proxy-token": PROXY_TOKEN } : {};
+      const res = await fetch(url, { headers, signal: AbortSignal.timeout(25_000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       text = await res.text();
       return parseEnvelope(serviceId, text);
