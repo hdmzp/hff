@@ -30,7 +30,18 @@ export default async function DashboardPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h1 className="display text-4xl text-on-dark sm:text-5xl">건강기능식품 산업 동향</h1>
-            <DataSourceBadge source={data.sources.ingredient} fetchedAt={data.fetchedAt} />
+            <span className="flex flex-wrap items-center gap-2">
+              <DataSourceBadge
+                datasetLabel="원료"
+                source={data.sources.ingredient}
+                fetchedAt={data.fetchedAts.ingredient}
+              />
+              <DataSourceBadge
+                datasetLabel="품목"
+                source={data.sources.product}
+                fetchedAt={data.fetchedAts.product}
+              />
+            </span>
           </div>
           <p className="mt-4 max-w-xl text-lg text-body-dark">
             식약처 기능성 원료 인정 현황과 품목 데이터를 한눈에 — 유통업계를 위한 트렌드
