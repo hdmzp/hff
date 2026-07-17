@@ -67,10 +67,12 @@ const candidates = [...new Set([...DEFAULT_CANDIDATES, ...process.argv.slice(2)]
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36";
+
 async function probe(serviceId) {
   const url = `${BASE}/${KEY}/${serviceId}/json/1/3`;
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+    const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) });
     if (!res.ok) return { serviceId, code: `HTTP-${res.status}` };
     const json = await res.json();
     const envelope = json[serviceId] ?? json;
