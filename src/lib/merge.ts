@@ -30,6 +30,7 @@ export interface MergedData {
   searchItems: SearchItem[];
   sources: { ingredient: DataSource; individual: DataSource; product: DataSource };
   fetchedAt?: string;
+  fetchedAts: { ingredient?: string; product?: string };
 }
 
 async function buildMergedDataUncached(): Promise<MergedData> {
@@ -136,6 +137,7 @@ async function buildMergedDataUncached(): Promise<MergedData> {
     searchItems,
     sources: { ingredient: ing.source, individual: ind.source, product: prd.source },
     fetchedAt: ing.fetchedAt,
+    fetchedAts: { ingredient: ing.fetchedAt, product: prd.fetchedAt },
   };
 }
 

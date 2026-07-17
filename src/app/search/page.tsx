@@ -27,7 +27,18 @@ export default async function SearchPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="display text-4xl">원료·품목 검색</h1>
-        <DataSourceBadge source={data.sources.ingredient} fetchedAt={data.fetchedAt} />
+        <span className="flex flex-wrap items-center gap-2">
+          <DataSourceBadge
+            datasetLabel="원료"
+            source={data.sources.ingredient}
+            fetchedAt={data.fetchedAts.ingredient}
+          />
+          <DataSourceBadge
+            datasetLabel="품목"
+            source={data.sources.product}
+            fetchedAt={data.fetchedAts.product}
+          />
+        </span>
       </div>
       <p className="mt-3 max-w-2xl text-body">
         기능성 원료 인정 현황({data.ingredients.length.toLocaleString()}건)과 품목분류(

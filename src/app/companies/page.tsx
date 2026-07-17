@@ -22,7 +22,11 @@ export default async function CompaniesPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="display text-4xl">업체 분석</h1>
-        <DataSourceBadge source={data.sources.ingredient} fetchedAt={data.fetchedAt} />
+        <DataSourceBadge
+          datasetLabel="원료"
+          source={data.sources.ingredient}
+          fetchedAt={data.fetchedAts.ingredient}
+        />
       </div>
       <p className="mt-3 max-w-2xl text-body">
         기능성 원료 인정 건수 기준 업체 랭킹과 지역 분포입니다. 업체명을 클릭하면 보유 원료

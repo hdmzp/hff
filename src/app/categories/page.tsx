@@ -20,7 +20,7 @@ export default async function CategoriesPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="display text-4xl">기능성 분류 탐색</h1>
-        <DataSourceBadge source={nutrition.source} fetchedAt={nutrition.fetchedAt} />
+        <DataSourceBadge datasetLabel="영양DB" source={nutrition.source} fetchedAt={nutrition.fetchedAt} />
       </div>
       <p className="mt-3 max-w-2xl text-body">
         영양DB의 대분류 → 중분류 → 소분류 체계를 탐색하고, 분류와 관련된 인정 원료·품목을

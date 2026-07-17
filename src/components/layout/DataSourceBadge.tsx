@@ -7,13 +7,22 @@ const STYLES: Record<DataSource, { label: string; className: string }> = {
   mock: { label: "샘플 데이터", className: "bg-[#fff4e0] text-[#a05a00]" },
 };
 
-export default function DataSourceBadge({ source, fetchedAt }: { source: DataSource; fetchedAt?: string }) {
+export default function DataSourceBadge({
+  source,
+  fetchedAt,
+  datasetLabel,
+}: {
+  source: DataSource;
+  fetchedAt?: string;
+  datasetLabel?: string; // 예: "원료", "품목" — 데이터셋별 구분 표시
+}) {
   const { label, className } = STYLES[source];
   const time = fetchedAt
     ? new Date(fetchedAt).toLocaleDateString("ko-KR", { year: "numeric", month: "short", day: "numeric" })
     : null;
   return (
     <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ${className}`}>
+      {datasetLabel && <span className="opacity-70">{datasetLabel}:</span>}
       {label}
       {time && <span className="opacity-70">· {time} 기준</span>}
     </span>
