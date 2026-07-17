@@ -39,6 +39,7 @@ const DATASETS = [
 const PAGE_SIZE = 1000;
 const MAX_ROWS = 50_000;
 const OUT_DIR = path.join(process.cwd(), "data", "live");
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36";
 
 async function fetchPage(serviceId, start, end) {
   // 직접 호출(http/https) 실패 시 프록시로 재시도
@@ -49,7 +50,8 @@ async function fetchPage(serviceId, start, end) {
   for (const base of bases) {
     try {
       const url = `${base}/${KEY}/${serviceId}/json/${start}/${end}`;
-      const headers = PROXY_URL && base.startsWith(PROXY_URL) && PROXY_TOKEN ? { "x-proxy-token": PROXY_TOKEN } : {};
+      const headers = { "User-Agent": UA };
+      if (PROXY_URL && base.startsWith(PROXY_URL) && PROXY_TOKEN) headers["x-proxy-token"] = PROXY_TOKEN;
       const res = await fetch(url, { headers, signal: AbortSignal.timeout(25_000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       text = await res.text();
